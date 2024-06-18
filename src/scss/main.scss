@@ -1,0 +1,378 @@
+@import 'variables';
+@import 'fonts';
+@import 'offer-card';
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  font-family: $font-family;
+  font-weight: 400;
+  color: $main-black-text;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+select,
+button,
+input,
+a:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+}
+
+a,
+button:focus {
+  outline: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1380px;
+  padding: 0 50px;
+  margin: 0 auto;
+  @media (max-width: 1100px) {
+    padding: 0 36px;
+  }
+  @media (max-width: 1000px) {
+    padding: 0 72px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 12.5px;
+  }
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.std-btn {
+  padding: 19px 35px;
+  border: 2px solid $btn-violet;
+  display: inline-block;
+  border-radius: 10px;
+  color: $btn-violet;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.std-btn:focus-visible {
+  background-color: #c998fb;
+  border-color: $mid-violet;
+  color: #fff;
+}
+.std-btn:hover:not(:focus-visible) {
+  background-color: $btn-violet;
+  color: #fff;
+}
+.std-btn:active:not(:focus-visible) {
+  background-color: $bright-violet;
+  border-color: $bright-violet;
+}
+
+
+.violet-btn {
+  padding: 19px 35px;
+  border: 2px solid $btn-violet;
+  background-color: $btn-violet;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.violet-btn:focus-visible {
+  background-color: #c998fb;
+  border-color: $bright-violet;
+}
+.violet-btn:hover:not(:focus-visible) {
+  background-color: #c998fb;
+  border-color: #c998fb;
+}
+.violet-btn:active:not(:focus-visible) {
+  background-color: $bright-violet;
+  border-color: $bright-violet;
+}
+
+
+.text {
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.section-title {
+  margin-bottom: 26px;
+  font-size: 32px;
+  color: $main-black-text;
+  font-weight: 400;
+  @media (max-width: 650px) {
+    font-size: 24px;
+    line-height: 100%;
+  }
+}
+
+.text-gray {
+  color: #999;
+}
+
+.main-logo {
+  grid-area: ccc;
+  padding-top: 14px;
+  transition: outline-color 0.3s;
+  @media (max-width: 1100px) {
+    padding-top: 16px;
+  }
+  @media (max-width: 1000px) {
+    margin-left: -2px;
+  }
+  @media (max-width: 765px) {
+    justify-self: center;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+  &:focus-visible {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: $main-orange;
+  }
+}
+
+
+// Чекбоксы
+.checkbox {
+  opacity: 0;
+  cursor: pointer;
+  &:checked + .checkbox-text {
+    &::before {
+      background-color: $mid-violet;
+    }
+    &::after {
+      transform: scale(1);
+    }
+  }
+  &:focus-visible + .checkbox-text{
+    &::before {
+      border-color: $bright-violet;
+      border-width: 2px;
+    }
+  }
+  &:hover:not(:focus-visible) + .checkbox-text {
+    &::before {
+      background-color: #ebd1ff;
+    }
+
+  }
+}
+
+.checkbox-text {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -13px;
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+    background-color: transparent;
+    border: 1px solid $mid-violet;
+    transition: background-color 0.3s;
+    @media (max-width: 650px) {
+      top: 0px;
+      left: -20px;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -13px;
+    width: 13px;
+    height: 13px;
+    z-index: 1;
+    background-image: url("./images/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0);
+    transition: scale 0.4s;
+    @media (max-width: 650px) {
+      top: 0px;
+      left: -20px;
+    }
+  }
+}
+
+.arrow-btn {
+  margin-top: auto;
+  align-self: start;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  stroke: $mid-violet;
+  stroke-width: 2px;
+  fill: transparent;
+  color: $mid-violet;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  &:focus-visible {
+    stroke: #fff;
+    &::after {
+      background-color: #c998fb;
+    }
+  }
+  &:hover:not(:focus-visible) {
+    stroke: white;
+    &::after {
+      background-color: $mid-violet;
+    }
+  }
+  &:active:not(:focus-visible) {
+    &::after {
+      background-color: $bright-violet;
+      border-color: $bright-violet;
+    }
+  }
+  @media (max-width: 1100px) {
+    margin-left: 30px;
+  }
+  @media (max-width: 650px) {
+    position: absolute;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid $mid-violet;
+    border-radius: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .arrow-text {
+    margin-right: 10px;
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+  .arrow {
+    stroke: inherit;
+    fill: inherit;
+    stroke-width: inherit;
+    width: 7px;
+    height: 10px;
+    transition: stroke 0.3s;
+
+  }
+}
+
+.offer__label {
+  position: absolute;
+  left: 16px;
+  top: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92px;
+  padding: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-image: url('./images/star.svg');
+  background-repeat: no-repeat;
+  background-position: 15px 3px;
+  color: $main-orange;
+  @media (max-width: 650px) {
+    font-size: 12px;
+    left: 0px;
+    top: 13px;
+  }
+}
+
+.card-path {
+  font-size: 14px;
+  color: $main-gray;
+  .card-path__span {
+    transition: background-color 0.3s, color 0.3s;
+    &:last-child {
+      color: $bright-violet;
+    }
+    &:focus-visible:not(:last-child) {
+      background-color: $focus-violet;
+    }
+    &:hover:not(:focus-visible) {
+      color: $mid-violet;
+    }
+    &:active:not(:focus-visible) {
+      color: $bright-violet;
+    }
+  }
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+@import 'offer-card';
+@import 'header';
+@import 'hero';
+@import 'special';
+@import 'rating';
+@import 'new-banner';
+@import 'top';
+@import 'useful';
+@import 'feedback';
+@import 'footer';
+@import 'catalogue';
+@import 'card';
+@import 'cooperation';

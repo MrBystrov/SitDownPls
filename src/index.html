@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High pass</title>
+
+  <!-- Fonts preload -->
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/PlayfairDisplay-Black.woff2" as="font">
+
+  <!-- img preload -->
+  <link rel="stylesheet" href="./images/main-page/hero-banner-1920.jpg">
+
+
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  @@include('./template/header.html')
+  <main class="main">
+    <h1 class="visually-hidden">Интернет магазин мебели SitDownPls</h1>
+    <section class="hero" >
+      <div class="container">
+        <h2 class="hero__offer title">Скидка 15% на первую покупку</h2>
+        <button class="hero__btn violet-btn btn ">Получить!</button>
+      </div>
+    </section>
+    <section class="special">
+      <div class="container">
+        <h2 class="section-title title">Специальные предложения</h2>
+        <ul class="special__list list-reset flex">
+          <li class="special__list-item offer offer-1">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/special-1-all.webp"
+                src="./images/main-page/special-1-all.png" alt="Изображение кресло" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Кресло велюровое “X-24”</h3>
+                <div class="offer__price price">
+                  <span class="price__sale">15 990 руб</span>
+                  <span class="price__original">24 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">- 9 000</span>
+            </div>
+          </li>
+          <li class="special__list-item offer offer-double">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/special-2-all.webp"
+                src="./images/main-page/special-2-all.png" alt="Изображение Диван тканевый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван тканевый “Z-44”</h3>
+                <div class="offer__price price">
+                  <span class="price__sale">22 990 руб</span>
+                  <span class="price__original">32 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">- 10 000</span>
+            </div>
+          </li>
+
+          <li class="special__list-item offer offer-3">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/special-3-all.webp"
+                src="./images/main-page/special-3-all.png" alt="Изображение Будильник" width="149" height="218">
+              <div class="offer__content">
+                <h3 class="offer__title">Будильник “Quartz-23”</h3>
+                <div class="offer__price price">
+                  <span class="price__sale">1 290 руб</span>
+                  <span class="price__original">1 890 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">- 600</span>
+            </div>
+          </li>
+
+          <li class="special__list-item offer offer-4">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/special-4-all.webp"
+                src="./images/main-page/special-4-all.png" alt="Статуэтка Олень" width="149" height="218">
+              <div class="offer__content">
+                <h3 class="offer__title">Мини-скульптура “Oh my deer”</h3>
+                <div class="offer__price price">
+                  <span class="price__sale">690 руб</span>
+                  <span class="price__original">990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">- 300</span>
+            </div>
+          </li>
+
+          <li class="special__list-item offer offer-5">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/special-5-all.webp"
+                src="./images/main-page/special-5-all.png" alt="Изображение Диван вел-флок" width="149" height="218">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван вел-флок “Z-85”</h3>
+                <div class="offer__price price">
+                  <span class="price__sale">22 990 руб</span>
+                  <span class="price__original">32 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">- 10000</span>
+            </div>
+          </li>
+
+          <li class="special__list-item offer offer-6">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/special-6-all.webp"
+                src="./images/main-page/special-6-all.png" alt="Изображение Термометр + гидрометр" width="149"
+                height="218">
+              <div class="offer__content">
+                <h3 class="offer__title">Термометр + гидрометр “H-18”</h3>
+                <div class="offer__price price">
+                  <span class="price__sale">1 390 руб</span>
+                  <span class="price__original">2 090 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">- 700</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="rating">
+      <div class="container">
+        <h2 class="section-title rating__title title">
+          Высокий рейтинг
+        </h2>
+        <ul class="rating__list flex list-reset">
+          <li class="rating__item offer rating-1">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-1.webp"
+                src="./images/main-page/rating-1.png" alt="Диван черный кожаный" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван кожаный “R-94”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">94 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">5,0</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-2">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-2.webp"
+                src="./images/main-page/rating-2.png" alt="Изображение Диван апартековый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван апартековый “T-75”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">69 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,9</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-3">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-3.webp"
+                src="./images/main-page/rating-3.png" alt="Изображение Диван тканевый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван тканевый “D-31”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">28 490 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,8</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-4">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-4.webp"
+                src="./images/main-page/rating-4.png" alt="Изображение Диван велюровый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван велюровый “Y-68”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">22 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,8</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-5">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-5.webp"
+                src="./images/main-page/rating-5.png" alt="Изображение Диван из шинила" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван из шинила “W-95”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">22 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,8</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-6">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-6.webp"
+                src="./images/main-page/rating-6.png" alt="Изображение Диван флоковый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван флоковый “G-41”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">17 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,8</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-7">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-7.webp"
+                src="./images/main-page/rating-7.png" alt="Изображение Диван шиниловый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван шиниловый “V-43”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">19 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,8</span>
+            </div>
+          </li>
+          <li class="rating__item offer rating-8">
+            <div class="offer__link">
+              <img class="offer__img" srcset="./images/main-page/webp/rating-8.webp"
+                src="./images/main-page/rating-8.png" alt="Изображение Диван велюровый" width="193" height="210">
+              <div class="offer__content">
+                <h3 class="offer__title">Диван велюровый “S-99”</h3>
+                <div class="offer__price price">
+                  <span class="price__original">19 990 руб</span>
+                </div>
+                <button class="std-btn offer-btn">Купить</button>
+              </div>
+              <span class="offer__label">4,7</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="new-banner">
+      <div class="container new-banner__container">
+        <h2 class="new-banner__title title">Оксфорд 1950</h2>
+        <p class="new-banner__descr text">Новая коллекция изысканных кресел</p>
+        <button class="violet-btn btn new-banner__btn">Ознакомиться</button>
+      </div>
+    </section>
+    <section class="top">
+      <div class="container">
+        <h2 class="section-title title top__title">Топ категории</h2>
+        <div class="top__content">
+          <ul class="top__list list-reset">
+            <li class="top__item top__item-1 flex">
+              <ul class="top__item-types list-reset flex">
+                <li class="top__item-type">Прямые</li>
+                <li class="top__item-type">Угловые</li>
+                <li class="top__item-type">Модульные</li>
+              </ul>
+              <h3 class="top__item-title title">Диваны</h3>
+              <img srcset="./images/main-page/webp/top-1.webp" src="./images/main-page/top-1.png"
+                alt="Изображение диван" class="top__item-img">
+              <a href="#catalogue.html" class="btn top__btn arrow-btn" aria-label="Перейти в каталог">
+                <span class="top__btn-text arrow-text">В каталог</span>
+                <svg class="arrow" width="7" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="top__item top__item-2">
+              <ul class="top__item-types list-reset flex">
+                <li class="top__item-type">Мягкие</li>
+                <li class="top__item-type">Кресла-кровати</li>
+              </ul>
+              <h3 class="top__item-title title">Кресла</h3>
+              <img srcset="./images/main-page/webp/top-2.webp" src="./images/main-page/top-2.png"
+                alt="Изображение диван" class="top__item-img">
+              <a href="#catalogue.html" class="btn top__btn arrow-btn" aria-label="Перейти в каталог">
+                <span class="top__btn-text arrow-text">В каталог</span>
+                <svg class="arrow" width="7" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="top__item top__item-3">
+              <ul class="top__item-types list-reset flex">
+                <li class="top__item-type">Односпальные</li>
+                <li class="top__item-type">Двуспальные</li>
+              </ul>
+              <h3 class="top__item-title title">Кровати</h3>
+              <img srcset="./images/main-page/webp/top-3.webp" src="./images/main-page/top-3.png"
+                alt="Изображение диван" class="top__item-img">
+              <a href="#catalogue.html" class="btn top__btn arrow-btn" aria-label="Перейти в каталог">
+                <span class="top__btn-text arrow-text">В каталог</span>
+                <svg class="arrow" width="7" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="top__item top__item-4">
+              <ul class="top__item-types list-reset flex">
+                <li class="top__item-type">Тумбы</li>
+                <li class="top__item-type">Комоды</li>
+              </ul>
+              <h3 class="top__item-title title">Тумбы и комоды</h3>
+              <img srcset="./images/main-page/webp/top-4.webp" src="./images/main-page/top-4.png"
+                alt="Изображение диван" class="top__item-img">
+              <a href="#catalogue.html" class="btn top__btn arrow-btn" aria-label="Перейти в каталог">
+                <span class="top__btn-text arrow-text">В каталог</span>
+                <svg class="arrow" width="7" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="top__item top__item-5">
+              <ul class="top__item-types list-reset flex">
+                <li class="top__item-type">Деревянные</li>
+                <li class="top__item-type">Металлокаркас</li>
+              </ul>
+              <h3 class="top__item-title title">Стулья</h3>
+              <img srcset="./images/main-page/webp/top-5.webp" src="./images/main-page/top-5.png"
+                alt="Изображение диван" class="top__item-img">
+              <a href="#catalogue.html" class="btn top__btn arrow-btn" aria-label="Перейти в каталог">
+                <span class="top__btn-text arrow-text">В каталог</span>
+                <svg class="arrow" width="7" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="useful">
+      <div class="container">
+        <h2 class="section-title title">Полезное</h2>
+        <ul class="useful__list list-reset flex">
+          <li class="useful__item useful__item-1">
+            <picture class="useful__item-picuture">
+              <source srcset="./images/main-page/webp/useful-1-all.webp" media="(max-width: 1100px)">
+              <source srcset="./images/main-page/useful-1-all.jpg" media="(max-width: 1100px)">
+              <source srcset="./images/main-page/webp/useful-1-1920.webp">
+              <img src="./images/main-page/useful-1-1920.jpg" alt="Изображение интерьер 1">
+            </picture>
+            <div class="useful__item-content">
+              <p class="useful__descr text">И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют
+                собой не что иное?</p>
+              <a href="#" class="std-btn useful__btn" aria-label="Кнопка читать">Читать</a>
+            </div>
+          </li>
+
+          <li class="useful__item useful__item-2">
+            <picture class="useful__item-picuture">
+              <source srcset="./images/main-page/webp/useful-2-all.webp" media="(max-width: 1100px)">
+              <source srcset="./images/main-page/useful-2-all.jpg" media="(max-width: 1100px)">
+              <source srcset="./images/main-page/webp/useful-2-1920.webp">
+              <img src="./images/main-page/useful-2-1920.jpg" alt="Изображение интерьер 2">
+            </picture>
+            <div class="useful__item-content">
+              <p class="useful__descr text">Как принято считать, некоторые особенности приносят несомненную пользу
+                обществу?</p>
+              <a href="#" class="std-btn useful__btn" aria-label="Кнопка читать">Читать</a>
+            </div>
+          </li>
+
+          <li class="useful__item useful__item-3">
+            <picture class="useful__item-picuture">
+              <source srcset="./images/main-page/webp/useful-3-all.webp" media="(max-width: 1100px)">
+              <img src="./images/main-page/useful-3-all.jpg" alt="Изображение интерьер 3">
+            </picture>
+            <div class="useful__item-content">
+              <p class="useful__descr text">Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?
+              </p>
+              <a href="#" class="std-btn useful__btn" aria-label="Кнопка читать">Читать</a>
+            </div>
+          </li>
+
+          <li class="useful__item useful__item-4">
+            <picture class="useful__item-picuture">
+              <source srcset="./images/main-page/webp/useful-4-all.webp" media="(max-width: 1100px)">
+              <img src="./images/main-page/useful-4-all.jpg" alt="Изображение интерьер 4">
+            </picture>
+            <div class="useful__item-content">
+              <p class="useful__descr text">Прежде всего, консультация с широким активом однозначно фиксирует
+                необходимость распределения?</p>
+              <a href="#" class="std-btn useful__btn" aria-label="Кнопка читать">Читать</a>
+            </div>
+          </li>
+
+          <li class="useful__item useful__item-5">
+            <picture class="useful__item-picuture">
+              <source srcset="./images/main-page/webp/useful-5-all.webp" media="(max-width: 1100px)">
+              <img src="./images/main-page/useful-5-all.jpg" alt="Изображение интерьер 5">
+            </picture>
+            <div class="useful__item-content">
+              <p class="useful__descr text">Как принято считать, некоторые особенности приносят несомненную пользу
+                обществу?</p>
+              <a href="#" class="std-btn useful__btn" aria-label="Кнопка читать">Читать</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <section class="feedback">
+      <div class="container feedback__container flex">
+          <div class="feedback__questions flex">
+            <h2 class="section-title title feedback__title">Мы всегда вам рады!</h2>
+            <p class="feedback__descr text">
+              Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
+            </p>
+            <form action="#" class="feedback__form form flex ">
+              <label class="form__label">
+                <span class="visually-hidden">Как вас зовут?</span>
+                <input type="text" class="form__input" placeholder="Как вас зовут?" name="name">
+              </label>
+              <label class="form__label">
+                <span class="visually-hidden">Введите ваш номер телефона</span>
+                <input type="text" class="form__input" placeholder="Ваш телефон" name="phone-nr">
+              </label>
+              <label class="form__label">
+                <span class="visually-hidden">Введите ваш Email</span>
+                <input type="text" class="form__input" placeholder="Ваш e-mail" name="e-mail">
+              </label>
+              <button class="violet-btn form__btn btn">Отправить</button>
+              <label class="form__agree agree flex">
+                <span class="visually-hidden">Отметьте галочкой, принимаете ли вы пользовательское соглашение</span>
+                <input type="checkbox" class="agree__checkbox checkbox" name="agreement" value="apply">
+                <span class="agree__text checkbox-text text">Принимаю <a href="#" class="agree__link">пользовательское соглашение</a></span>
+              </label>
+            </form>
+          </div>
+          <div class="feedback__img"></div>
+        </div>
+    </section>
+  </main>
+
+
+
+  @@include('./template/footer.html')
+</body>
+
+</html>

@@ -1,0 +1,467 @@
+.header {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 17px;
+  @media (max-width: 1100px) {
+    padding-top: 15px;
+  }
+  @media (max-width: 765px) {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+  .header__container {
+
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 32px;
+    grid-template-areas:
+      "aaa bbb bbb"
+      "ccc ddd ddd"
+      "eee eee fff";
+    align-items: center;
+    @media (max-width: 1100px) {
+      grid-template-areas:
+        "aaa aaa aaa"
+        "bbb bbb fff"
+        "ccc ddd ddd"
+        "eee eee eee";
+      row-gap: 25px;
+    }
+    @media (max-width: 1000px) {
+      grid-template-areas:
+        "aaa aaa aaa"
+        "bbb bbb bbb"
+        "ccc . fff"
+        "ddd ddd ddd"
+        "eee eee eee";
+      row-gap: 35px;
+    }
+    @media (max-width: 765px) {
+      grid-template-areas:
+        "ccc ccc ccc"
+        "aaa fff fff"
+        "ddd ddd ddd"
+        "eee eee eee";
+      row-gap: 16px;
+    }
+    @media (max-width: 420px) {
+      grid-template-areas:
+        "ccc ccc ccc"
+        "aaa fff ."
+        "ddd ddd ddd"
+        "eee eee eee";
+
+      row-gap: 17px;
+    }
+
+    // header phone
+    .header__phone {
+      position: relative;
+      align-items: center;
+      width: 187px;
+      height: 27px;
+      column-gap: 0.75px;
+      color: $main-orange;
+      grid-area: aaa;
+      fill: $main-orange;
+      z-index: 1;
+      @media (max-width: 1000px) {
+        column-gap: 2.75px;
+      }
+      @media (max-width: 765px) {
+        margin-bottom: 13px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -5px;
+        right: 70px;
+        z-index: -1;
+        background-color: transparent;
+        transition: background-color 0.3s;
+      }
+      &:focus-visible {
+        &::before {
+          background-color: #fff5d1;
+        }
+      }
+      .phone-img {
+        width: 18px;
+        height: 18px;
+        fill: inherit;
+        transition: fill 0.3s;
+      }
+      .phone-number {
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+      &:hover:not(:focus-visible) .phone-img {
+        fill: #ffbd59;
+      }
+      &:hover:not(:focus-visible) .phone-number {
+        color: #ffbd59;
+      }
+      &:active:not(:focus-visible) .phone-img {
+        fill: #bb370e;
+      }
+      &:active:not(:focus-visible) .phone-number {
+        color: #bb370e;
+      }
+    }
+
+    // Info menu
+    .info-menu {
+
+      grid-column: span 2;
+      @media (max-width: 1000px) {
+        grid-column: span 3;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 169px;
+        background-color: $background-gray;
+        z-index: -1;
+        @media (max-width: 1100px) {
+          top: 59px;
+          bottom: 232px;
+        }
+
+        @media (max-width: 1000px) {
+          top: 59px;
+          bottom: 223px;
+        }
+        @media (max-width: 765px) {
+          display: none;
+        }
+      }
+      .info-menu__list {
+        justify-content: flex-end;
+        column-gap: 64px;
+        font-size: 14px;
+        line-height: 130%;
+        grid-area: bbb;
+        @media (max-width: 1100px) {
+          justify-content: flex-start;
+        }
+        @media (max-width: 1000px) {
+          justify-content: start;
+          column-gap: 34px;
+          line-height: 100%;
+        }
+        @media (max-width: 765px) {
+          display: none;
+        }
+        .info-menu__item {
+          .info-menu__link {
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: -10px;
+              right: -10px;
+              z-index: -1;
+              background-color: transparent;
+              transition: background-color 0.3s;
+            }
+            &:focus-visible {
+              &::before {
+                background-color: $focus-violet;
+              }
+            }
+            &:hover:not(:focus-visible) {
+              color: $mid-violet;
+            }
+            &:active:not(:focus-visible) {
+              color: $bright-violet;
+            }
+          }
+        }
+      }
+    }
+    .main-logo {
+      grid-area: ccc;
+      padding-top: 14px;
+      transition: outline-color 0.3s;
+      @media (max-width: 1100px) {
+        padding-top: 16px;
+      }
+      @media (max-width: 1000px) {
+        margin-left: -2px;
+      }
+      @media (max-width: 765px) {
+        justify-self: center;
+        padding-top: 0;
+        margin-bottom: 20px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 186px;
+          background-color: $background-gray;
+          z-index: -1;
+        }
+      }
+      &:focus-visible {
+        outline-width: 1px;
+        outline-style: solid;
+        outline-color: $main-orange;
+      }
+    }
+
+    // main menu
+    .main-menu {
+      grid-area: ddd;
+      padding-top: 14px;
+
+      @media (max-width: 1100px) {
+        padding-top: 16px;
+      }
+      @media (max-width: 1000px) {
+        padding-top: 0;
+        font-size: 14px;
+      }
+      @media (max-width: 765px) {
+        width: 100%;
+        overflow: hidden;
+      }
+      .main-menu__list {
+        column-gap: 92.5px;
+        justify-content: flex-end;
+
+        @media (max-width: 1280px) {
+          gap: 55px;
+        }
+        @media (max-width: 1100px) {
+          gap: 42.5px;
+        }
+        @media (max-width: 1000px) {
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          gap: 0;
+          margin-left: -4px;
+          margin-right: -4px;
+          margin-top: -3px;
+        }
+        @media (max-width: 765px) {
+          justify-content: left;
+          flex-wrap: nowrap;
+          gap: 30px;
+          margin-left: 0;
+          width: 100%;
+          overflow-x: scroll;
+          padding-bottom: 20px;
+          margin-bottom: -20px;
+        }
+
+        .main-menu__item {
+          position: relative;
+          transition: color 0.4s;
+          .main-menu__link {
+            color: $main-black-text;
+            &::before {
+              content: "";
+              position: absolute;
+              top: -2px;
+              bottom: -2px;
+              left: -10px;
+              right: -10px;
+              z-index: -1;
+              background-color: transparent;
+              transition: background-color 0.3s;
+            }
+            &:focus-visible {
+              &::before {
+                background-color: $focus-violet;
+              }
+            }
+            &:hover:not(:focus-visible) {
+              color: $mid-violet;
+            }
+            &:active:not(:focus-visible) {
+              color: $bright-violet;
+            }
+          }
+        }
+      }
+    }
+
+
+    .search-form {
+      grid-area: eee;
+      display: flex;
+      align-items: center;
+      max-width: 1061px;
+      justify-content: space-between;
+      padding: 0 35px;
+      border-radius: 10px;
+      border: 2px solid #f6f6f6;
+      background-color: #f6f6f6;
+      transition: border-color 0.3s;
+      @media (max-width:1100px) {
+        margin-top: 10px;
+        max-width: 632px;
+      }
+      @media (max-width:1000px) {
+        margin-top: 0;
+        padding: 0 28px;
+        max-width: 733px;
+      }
+      @media (max-width:650px) {
+        flex-wrap: nowrap;
+        max-width: 296px;
+      }
+      &.focused {
+        border: 2px solid #a65cf0;
+      }
+      &:hover:not(:focus-visible) {
+        background-color: #eaeaea;
+      }
+
+      .search-form-icon {
+        width: 16px;
+        flex-shrink: 0;
+        height: 16px;
+        margin-right: 5px;
+        @media (max-width:1000px) {
+          margin-right: 10px;
+        }
+      }
+      .search-form__input {
+        flex-grow: 1;
+        background-color: transparent;
+        border: none;
+        padding: 17px 0;
+        &::placeholder {
+          color: #999;
+        }
+        &:focus-visible {
+          &.search-form{
+            background-color: red;
+          }
+        }
+        @media (max-width: 650px) {
+          flex-grow: 0;
+         flex-shrink: 1;
+         max-width: 173px;
+        }
+      }
+
+
+
+        .search-form__arrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          border: 2px solid $mid-violet;
+          background-color: transparent;
+          stroke: #a65cf0;
+          transition: background-color 0.3s, border-color 0.3s;
+          &:focus-visible {
+            stroke: #fff;
+            background-color: #c998fb;
+            border-color: #7033ac;
+          }
+          &:hover:not(:focus-visible) {
+            stroke: #fff;
+            background-color: #a65cf0;
+          }
+          &:active:not(:focus-visible) {
+            background-color: #7033ac;
+            border-color: #7033ac;
+          }
+          .arrow {
+            stroke: inherit;
+            transition: stroke 0.3s;
+          }
+        }
+    }
+
+    // cabinet
+    .cabinet {
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      column-gap: 34px;
+      grid-area: fff;
+      @media (max-width: 1000px) {
+        padding-top: 14px;
+      }
+      @media (max-width: 765px) {
+        padding-top: 0;
+        padding-left: 7px;
+        margin-bottom: 13px;
+      }
+      .cabinet__item {
+        position: relative;
+        fill: #a65cf0;
+        &::before {
+          content: "";
+          position: absolute;
+          left: -5px;
+          right: -5px;
+          top: -5px;
+          bottom: -5px;
+          z-index: -1;
+          background-color: transparent;
+          transition: background-color 0.3s;
+        }
+        &:focus-visible {
+          fill: #fff;
+          &::before {
+            background-color: #c998fb;
+          }
+        }
+        &:hover:not(:focus-visible) {
+          fill: #c998fb;
+        }
+        &:active:not(:focus-visible) {
+          fill: #7033ac;
+        }
+        .cabinet__item-icon {
+          fill: inherit;
+          transition: fill 0.3s;
+        }
+      }
+      .cabinet__cart {
+        position: relative;
+        padding-left: 10px;
+        &::after {
+          content: "0";
+          position: absolute;
+          top: 6px;
+          left: -2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 14px;
+          height: 15px;
+          border-radius: 100%;
+          font-size: 10px;
+          font-weight: 700;
+
+          color: #fff;
+          background-color: $main-orange;
+        }
+      }
+    }
+  }
+}
+
+
+

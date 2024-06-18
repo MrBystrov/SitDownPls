@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High pass</title>
+
+  <!-- Fonts preload -->
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/PlayfairDisplay-Black.woff2" as="font">
+
+
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  @@include('./template/header.html')
+
+  <main class="cooperation container">
+    <div class="card-path">
+      <a href="index.html" class="card-path__span">Главная /</a>
+      <a class="card-path__span" tabindex="-1">Сотрудничество</a>
+    </div>
+    <div class="cooperation__content">
+      <h2 class="section-title cooperation__title title">Сотрудничество</h2>
+      <article class="cooper-item cooperation__article supplier">
+        <h3 class="supplier__title cooper-title title">Поставщикам</h3>
+        <p class="supplier__descr text">При планировании обстановки торгового помещения важно обустроить его с комфортом для покупателей: грамотно зонировать, обеспечить эффективную демонстрацию и хранение товаров в зале. Если вам необходимо комплексное оснащение, организация зоны отдыха или отдельные предметы меблировки для поддержания эффективной торговой деятельности, мы поможем выбрать продукцию с учетом нагрузки от поступающего трафика.</p>
+      </article>
+      <ul class="cooper-item cooperation__list advantage list-reset">
+        <li class="advantage__item advantage__item-title">
+          <h3 class="advantage__title cooper-title title">Что вы получаете?</h3>
+        </li>
+        <li class="advantage__item advantage__item-1">Мы ценим идеи и вдохновение и предлагаем сотрудничество талантливым дизайнерам и архитекторам. Выпускаемая нами продукция гармонично дополнит любой современный проект.</li>
+        <li class="advantage__item advantage__item-2">Комплексное решение для красивого и функционального обустройства любых пространств. </li>
+        <li class="advantage__item advantage__item-3">В ассортименте представлены все товарные группы для того, чтобы воссоздать обстановку в помещениях разных типов: кабинетах, смешанных пространствах, Open Space, гостевых и переговорных комнатах.</li>
+      </ul>
+      <ul class="cooper-item cooperation__list possibility list-reset">
+        <li class="possibility__item ">
+          <h3 class="possibility__title cooper-title title">Ваши преимущества от сотрудничества</h3>
+        </li>
+        <li class="possibility__item">
+          <h4 class="possibility__item-title title">Возможность 1:</h4>
+          <p class="possibility__item-text text">Создавайте незабываемые впечатления. Красиво меблированная фотостудия не оставит клиентов равнодушными, а созданная интерьером атмосфера будет надолго запечатлена на их снимках. Стильная и разноплановая обстановка творческого пространства – ключевая составляющая его успешной деятельности. Позаботьтесь о людях в кадре, а мы поможем правильно выбрать мебель.</p>
+        </li>
+        <li class="possibility__item list-reset">
+          <h4 class="possibility__item-title title">Возможность 2:</h4>
+          <p class="possibility__item-text text">Мы предлагаем застройщикам, работающим на территории РФ, участие наших специалистов от этапа проектирования обстановки квартир и подбора комплексных интерьерных решений до оптовых поставок мебели. Поможем организовать демонстрационный зал с образцами изделий и материалов на площади нового здания, чтобы покупатель заблаговременно подобрал тот вариант меблировки, который удовлетворит даже самые взыскательные ожидания.</p>
+        </li>
+      </ul>
+      <div class="guarant-container">
+        <h3 class="guarant-title title cooper-title">Гарантии</h3>
+        <ol class="cooper-item cooperation__list guarant">
+          <li class="guarant__item">При приемке товара Покупатель должен внимательно проверить его количество, качество и ассортимент на соответствие сопроводительным документам и заказу. После подписания товарного чека Покупатель утрачивает право предъявления претензий, которые можно выявить при приемке товара.</li>
+          <li class="guarant__item">На товары, сборка которых производилась покупателем самостоятельно (не специалистами Продавца), гарантийные обязательства Продавца не распространяются. Также гарантия не распространяется на повреждения товара, полученные в ходе самостоятельной доставки и подъема товара. Покупатель не вправе отказаться от товара надлежащего качества, имеющего индивидуально-определенные свойства, т.е. если товар может быть использован исключительно приобретающим его потребителем.</li>
+          <li class="guarant__item">Возврат или обмен товара возможен при условии, что сохранена упаковка, товарный вид и потребительские свойства товара, а также товарный и кассовый чеки. В этом случае мы гарантируем вам возврат полной стоимости товара (за вычетом стоимости доставки). В случае отказа от товара при доставке, клиент оплачивает услуги доставки.</li>
+        </ol>
+      </div>
+      <strong class="cooperation__guarant-period">
+        Срок гарантии на нашу мебель составляет от 18 до 60 месяцев
+      </strong>
+    </div>
+
+  </main>
+
+  @@include('./template/footer.html')
+</body>
+
+</html>

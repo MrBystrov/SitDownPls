@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High pass</title>
+
+  <!-- Fonts preload -->
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/PlayfairDisplay-Black.woff2" as="font">
+
+
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  @@include('./template/header.html')
+
+  <div class="card-path container">
+    <a href="index.html" class="card-path__span">Главная /</a>
+    <a href="catalogue.html" class="card-path__span">Каталог /</a>
+    <a href="#" class="card-path__span">Диваны /</a>
+    <a href="#" class="card-path__span" tabindex="-1">Прямые диваны</a>
+  </div>
+  <div class="container catalogue-container">
+    <aside class="aside">
+      <h2 class="section-title catalogue-title aside__title title">Каталог</h2>
+      <form class="aside__form filter">
+        <h3 class="filter__title title">Фильтровать по:</h3>
+
+        <div class="filter__group color-group">
+          <h4 class="filter__group-title title">Цвет</h4>
+          <label class="filter__label">
+            <span class="visually-hidden">Выбрать кориневый цвет</span>
+            <input type="checkbox" class="filter__checkbox checkbox" name="color" value="Коричневый">
+            <span class="checkbox-text filter__group-text">Коричневый</span>
+          </label>
+          <label class="filter__label">
+            <span class="visually-hidden">Выбрать черный цвет</span>
+            <input type="checkbox" class="filter__checkbox checkbox" name="color" value="Черный" checked>
+            <span class="checkbox-text filter__group-text">Черный</span>
+          </label>
+          <label class="filter__label">
+            <span class="visually-hidden">Выбрать синий цвет</span>
+            <input type="checkbox" class="filter__checkbox checkbox" name="color" value="Синий">
+            <span class="checkbox-text filter__group-text">Синий</span>
+          </label>
+          <label class="filter__label">
+            <span class="visually-hidden">Выбрать белый цвет</span>
+            <input type="checkbox" class="filter__checkbox checkbox" name="color" value="Белый">
+            <span class="checkbox-text filter__group-text">Белый</span>
+          </label>
+        </div>
+
+        <div class=" filter__group category-group ">
+          <h4 class="filter__group-title title">Категория</h4>
+          <label class="filter__label">
+            <span class="visually-hidden">Выбрать диваны</span>
+            <input type="checkbox" class="filter__checkbox checkbox" name="color" value="Диваны" checked>
+            <span class="checkbox-text filter__group-text">Диваны</span>
+          </label>
+          <label class="filter__label">
+            <span class="visually-hidden">Выбрать кресла</span>
+            <input type="checkbox" class="filter__checkbox checkbox" name="color" value="Кресла">
+            <span class="checkbox-text filter__group-text">Кресла</span>
+          </label>
+        </div>
+
+        <div class="filter__price-group price-group">
+          <h4 class="filter__group-title price-group__title title">Цена</h4>
+          <label class="price-group__label">
+            <span class="visually-hidden">Введите цену от 2000</span>
+            <span class="price-group__text">от</span>
+            <input type="text" class="price-group__input" name="lower-price" placeholder="2000">
+          </label>
+          <label class="price-group__label">
+            <span class="visually-hidden">Введите цену до 150000</span>
+            <span class="price-group__text">до</span>
+            <input type="text" class="price-group__input" name="upper-price" placeholder="150 000">
+          </label>
+        </div>
+
+      </form>
+
+      <div class="aside__new-collection new-collection">
+          <img src="./images/main-page/catalogee-new-collection.jpg" alt="Изображение кресла Оксфорд 1950" class="new-collection__img">
+          <div class="new-collection__content">
+            <h2 class="new-collection__title title">Оксфорд 1950</h2>
+            <p class="new-collection__descr text">Новая коллекция изысканных кресел</p>
+            <a href="./card.html" class="btn arrow-btn new-collection__btn" aria-label="перейти в каталог">
+              <span class="arrow-text new-collection__text">В каталог</span>
+              <svg class="arrow" width="7" height="10">
+                <use xlink:href="./images/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+      </div>
+    </aside>
+
+    <main class="catalogue">
+      <h2 class="section-title catalogue-title catalogue__title-main title">Каталог</h2>
+      <ul class="catalogue__list flex list-reset">
+
+        <li class="catalogue__item offer catalogue__item ">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-1.webp"
+              src="./images/main-page/rating-1.png" alt="Диван черный кожаный" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван кожаный “R-94”</h3>
+              <div class="offer__price price">
+                <span class="price__original">94 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">5,0</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-2">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-2.webp"
+              src="./images/main-page/rating-2.png" alt="Изображение Диван апартековый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван апартековый “T-75”</h3>
+              <div class="offer__price price">
+                <span class="price__original">69 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,9</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-3">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-3.webp"
+              src="./images/main-page/rating-3.png" alt="Изображение Диван тканевый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван тканевый “D-31”</h3>
+              <div class="offer__price price">
+                <span class="price__original">28 490 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,8</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-4">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-4.webp"
+              src="./images/main-page/rating-4.png" alt="Изображение Диван велюровый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван велюровый “Y-68”</h3>
+              <div class="offer__price price">
+                <span class="price__original">22 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,8</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-5">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-5.webp"
+              src="./images/main-page/rating-5.png" alt="Изображение Диван из шинила" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван из шинила “W-95”</h3>
+              <div class="offer__price price">
+                <span class="price__original">22 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,8</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-6">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-6.webp"
+              src="./images/main-page/rating-6.png" alt="Изображение Диван флоковый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван флоковый “G-41”</h3>
+              <div class="offer__price price">
+                <span class="price__original">17 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,8</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-7">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-7.webp"
+              src="./images/main-page/rating-7.png" alt="Изображение Диван шиниловый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван шиниловый “V-43”</h3>
+              <div class="offer__price price">
+                <span class="price__original">19 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,8</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-8">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/rating-8.webp"
+              src="./images/main-page/rating-8.png" alt="Изображение Диван велюровый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван велюровый “S-99”</h3>
+              <div class="offer__price price">
+                <span class="price__original">19 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,7</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-9">
+          <div class="offer__link">
+            <img class="offer__img" srcset="./images/main-page/webp/catalogue-9.webp"
+              src="./images/main-page/catalogue-9.png" alt="Изображение Диван велюровый" width="193" height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван из кожзама “F-85”</h3>
+              <div class="offer__price price">
+                <span class="price__original">26 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,7</span>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="catalogue__pagination pagination flex">
+        <label class="pagination__label"  tabindex="0">
+          <input type="radio" class="pagination__input" name="pagination" value="1">
+          <span class="pagination__button">1</span>
+        </label>
+        <label class="pagination__label" tabindex="0">
+          <input type="radio" class="pagination__input" name="pagination" value="2">
+          <span class="pagination__button">2</span>
+        </label>
+        <label class="pagination__label" tabindex="0">
+          <input type="radio" class="pagination__input" name="pagination" value="3">
+          <span class="pagination__button">3</span>
+        </label>
+      </div>
+    </main>
+
+  </div>
+
+
+  @@include('./template/footer.html')
+</body>
+
+</html>

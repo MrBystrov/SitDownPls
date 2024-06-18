@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High pass</title>
+
+  <!-- Fonts preload -->
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/PlayfairDisplay-Black.woff2" as="font">
+
+
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  @@include('./template/header.html')
+
+
+
+  <main class="container card-container">
+    <div class="card-path">
+      <a href="index.html" class="card-path__span">Главная /</a>
+      <a href="catalogue.html" class="card-path__span">Каталог /</a>
+      <a href="#" class="card-path__span">Диваны /</a>
+      <a href="#" class="card-path__span">Прямые диваны /</a>
+      <a href="#" class="card-path__span" tabindex="-1">D-31</a>
+    </div>
+    <section class="card">
+      <picture class="card__img card__item">
+        <source srcset="./images/card-page/webp/card-img.webp">
+        <img src="./images/card-page/card-img.png" alt="Изображение диван синий">
+      </picture>
+      <div class="card__descr-short descr-short card__item">
+        <span class="descr-short__label offer-link">4.8</span>
+        <h2 class="descr-short__title section-title title">Диван тканевый прямой “D-31”</h2>
+        <p class="descr-short__subtitle text">Мини 120 см без ящика Stark синий (Рогожка)</p>
+        <span class="descr-short__price">28 490 руб</span>
+        <button class="btn violet-btn btn-buy">Купить в один клик</button>
+        <button class="btn btn-cart">+ Добавить в корзину</button>
+      </div>
+      <div class="card__instruction instruction card__item">
+        <h3 class="instruction__title title">
+          Опорный механизм
+        </h3>
+        <div class="instruction__text">
+          <p class="instruction__text-up text">
+            Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье
+            «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку.
+          </p>
+          <p class="instruction__text-down text">Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но
+            подросток справится.</p>
+        </div>
+        <ul class="instruction__images-list list-reset flex">
+          <li class="instruction__list-item">
+            <img src="./images/card-page/card-instruction-1.png" alt="" class="instruction__image">
+          </li>
+          <li class="instruction__list-item">
+            <img src="./images/card-page/card-instruction-2.png" alt="" class="instruction__image">
+          </li>
+        </ul>
+      </div>
+      <ul class="card__dimensions dimensions list-reset card__item">
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Гарантия</dt>
+            <dd class="dimensions__desc">18 месяцев</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Артикул</dt>
+            <dd class="dimensions__desc">AAA41269004</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Длина</dt>
+            <dd class="dimensions__desc">163 см</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Высота</dt>
+            <dd class="dimensions__desc">90 см</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Глубина</dt>
+            <dd class="dimensions__desc">108 см</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Спальное место</dt>
+            <dd class="dimensions__desc">200 см х 125 см</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Высота посадки</dt>
+            <dd class="dimensions__desc">45 см</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Механизм</dt>
+            <dd class="dimensions__desc">Опорный</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Тип обивки</dt>
+            <dd class="dimensions__desc">Рогожка</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Цвет</dt>
+            <dd class="dimensions__desc">Синий</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Наполнитель</dt>
+            <dd class="dimensions__desc">Независимый пружинный блок</dd>
+          </dl>
+        </li>
+
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Материал каркаса</dt>
+            <dd class="dimensions__desc">Металл. рама с дерев. латами</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Количество мест</dt>
+            <dd class="dimensions__desc">Двухместные</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Категория</dt>
+            <dd class="dimensions__desc">Прямые тканевые диваны</dd>
+          </dl>
+        </li>
+        <li class="dimensions__item">
+          <dl class="dimensions__dl">
+            <dt class="dimensions__term">Возврат</dt>
+            <dd class="dimensions__desc">Условия</dd>
+          </dl>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="similar">
+      <h2 class="similar__title title">Похожие товары</h2>
+      <ul class="similar__list list-reset flex catalogue">
+        <li class="offer catalogue__item-10">
+          <div class="offer__link">
+            <img class="offer__img" src="./images/card-page/offer-10.png" alt="Изображение Диван велюровый" width="193"
+              height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван велюровый “R-85”</h3>
+              <div class="offer__price price">
+                <span class="price__original">34 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,5</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-11">
+          <div class="offer__link">
+            <img class="offer__img" src="./images/card-page/offer-11.png" alt="Изображение Диван велюровый" width="193"
+              height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван флоковый “H-58”</h3>
+              <div class="offer__price price">
+                <span class="price__original">23 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,6</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-12">
+          <div class="offer__link">
+            <img class="offer__img" src="./images/card-page/offer-12.png" alt="Изображение Диван велюровый" width="193"
+              height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван велюровый “S-44”</h3>
+              <div class="offer__price price">
+                <span class="price__original">34 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,5</span>
+          </div>
+        </li>
+
+        <li class="catalogue__item offer catalogue__item-13">
+          <div class="offer__link">
+            <img class="offer__img" src="./images/main-page/rating-7.png" alt="Изображение Диван велюровый" width="193"
+              height="210">
+            <div class="offer__content">
+              <h3 class="offer__title">Диван шиниловый “V-43”</h3>
+              <div class="offer__price price">
+                <span class="price__original">19 990 руб</span>
+              </div>
+              <a href="./card.html" class="std-btn offer-btn" aria-label="Кнопка купить">Купить</a>
+            </div>
+            <span class="offer__label">4,8</span>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  @@include('./template/footer.html')
+</body>
+
+</html>

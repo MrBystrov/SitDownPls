@@ -1,0 +1,132 @@
+.feedback {
+  padding-top: 35px;
+  padding-bottom: 70px;
+  @media (max-width: 767px) {
+    padding-top: 38px;
+  }
+  .feedback__container {
+    column-gap: 32px;
+    flex-wrap: nowrap;
+
+    .feedback__questions {
+      flex: 0 1 48.8%;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 1100px) {
+        flex: 0 1 42.8%;
+      }
+      @media (max-width: 1000px) {
+        flex: 1 1 30%;
+      }
+
+
+      .feedback__title {
+        margin-bottom: 4px;
+        font-size: 32px;
+        @media (max-width: 650px) {
+          font-size: 24px;
+          margin-bottom: 9px;
+        }
+      }
+
+      .feedback__descr {
+        color: #666;
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 16px;
+        @media (max-width: 1024px) {
+         max-width: 405px;
+        }
+        @media (max-width: 650px) {
+          line-height: 134%;
+        }
+      }
+
+      .feedback__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .form__input {
+          padding: 15px 19px;
+          margin-bottom: 30px;
+          border: 1px solid $background-gray;
+          width: 100%;
+          border: none;
+          border-radius: 10px;
+          line-height: 150%;
+          font-size: 16px;
+          background-color: $background-gray;
+          transition: border-color 0.3s, background-color 0.3s;
+          &:hover:not(:focus-visible) {
+            background-color: #eaeaea;
+          }
+          &:focus-visible {
+            border: 1px solid $mid-violet;
+
+          }
+          &:hover:not(:focus-visible) {
+            background-color: #eaeaea;
+          }
+          &::placeholder {
+            color: #999;
+          }
+        }
+
+        .agree__text {
+          position: relative;
+          @media (max-width: 650px) {
+            margin-left: 5px;
+            font-size: 12px;
+          }
+
+        }
+
+        .agree__link {
+          color: $mid-violet;
+          transition: background-color 0.3s, color 0.3s;
+          &:focus-visible {
+            background-color: #ebd1ff;
+          }
+          &:hover:not(:focus-visible) {
+            color: #c998fb;
+          }
+          &:active:not(:focus-visible) {
+            color: #7033AC;
+          }
+        }
+      }
+
+      .form__btn {
+        align-self: start;
+        padding: 16px 33px;
+        margin-bottom: 11px;
+
+        @media (max-width: 650px) {
+          margin-bottom: 14px;
+        }
+      }
+    }
+
+
+    .feedback__img {
+      min-height: 383px;
+      flex: 0 1 48.8%;
+      background-image: url("./images/main-page/feedback-1920.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media (max-width: 1100px) {
+        flex: 1 1 48.8%;
+        background-image: url("./images/main-page/feedback-1024.png");
+      }
+      @media (max-width: 1000px) {
+        flex: 0 1 30%;
+        background-image: url("./images/main-page/feedback-768.png");
+      }
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+  }
+}

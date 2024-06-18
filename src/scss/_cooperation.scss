@@ -1,0 +1,158 @@
+.cooperation__content {
+  padding-top: 32px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  max-width: 843px;
+  color: #666;
+  line-height: 180%;
+  @media (max-width: 1100px) {
+    padding-bottom: 74px;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 37px;
+    padding-bottom: 68px;
+  }
+  @media (max-width: 650px) {
+    padding-top: 0px;
+    font-size: 14px;
+    line-height: 179%;
+    padding-bottom: 60px;
+  }
+
+  .cooperation__title {
+    margin-bottom: 2px;
+    line-height: 100%;
+    @media (max-width: 650px) {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .cooper-title {
+    margin-bottom: 1px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width: 650px) {
+      font-size: 16px;
+    }
+  }
+  .guarant-title {
+    margin-bottom: 13px;
+  }
+
+  [class$='title']:not(h4) {
+    color: $main-black-text
+  }
+
+  .cooper-item  {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    .possibility__item-title {
+      margin-bottom: 13px;
+      color: $main-orange;
+      line-height: normal;
+    }
+
+  }
+
+  .advantage {
+    max-width: 587px;
+    line-height: 150%;
+    .advantage__item {
+      padding-left: 34px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      @media (max-width: 650px) {
+        padding-left: 36px;
+      }
+    }
+    .advantage__item-title {
+      padding-left: 0;
+    }
+    .advantage__item-1 {
+      background-image: url("./images/cooperation-advantage-1.svg");
+    }
+    .advantage__item-2 {
+      background-image: url("./images/cooperation-advantage-2.svg");
+    }
+    .advantage__item-3 {
+      background-image: url("./images/cooperation-advantage-3.svg");
+    }
+  }
+
+  .possibility {
+    .possibility__title {
+      @media (max-width: 650px) {
+        font-size: 14px;
+
+      }
+    }
+
+    .possibility__item-title {
+      font-size: 16px;
+      letter-spacing: -0.4px;
+    }
+    .possibility__item-text {
+      line-height: 178%;
+    }
+  }
+
+  .guarant {
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+    row-gap: 13.5px;
+    @media (max-width: 1100px) {
+      line-height: 182%;
+    }
+    @media (max-width: 650px) {
+
+      line-height: 178%;
+    }
+    .guarant__title {
+      margin-left: -20px;
+      &::marker {
+        opacity: 0;
+      }
+    }
+    .guarant__item {
+      max-width: 800px;
+      padding-left: 4px;
+
+      &::marker {
+        color: $main-orange;
+      }
+    }
+  }
+
+  .cooperation__guarant-period {
+    padding: 22px;
+    padding-left: 106px;
+    max-width: 630px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $main-black-text;
+    background-image: url("./images/cooperation/cooperation-pencil.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    @media (max-width: 1100px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @media (max-width: 1000px) {
+      padding-right: 15px;
+    }
+    @media (max-width: 650px) {
+      font-size: 16px;
+      padding: 3px 9px 9px 52px;
+      background-position: left 9px;
+      background-size: 12%;
+    }
+  }
+}

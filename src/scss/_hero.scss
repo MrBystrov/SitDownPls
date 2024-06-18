@@ -1,0 +1,54 @@
+.main {
+  padding-top: 10px;
+  @media (max-width:1100px) {
+    padding-top: 10px;
+  }
+  @media (max-width:321px) {
+    padding-top: 0px;
+  }
+}
+
+.hero {
+  padding: 80px 0;
+  background-image: url('./images/main-page/hero-banner-1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width:1200px) {
+    padding: 83px 0;
+    background-image: url('./images/main-page/hero-banner-1024.jpg');
+  }
+  @media (max-width:900px) {
+    background-image: url('./images/main-page/hero-banner-768.jpg');
+  }
+  @media (max-width:450px) {
+    padding: 30px 0;
+  }
+  @media (max-width:321px) {
+    background-image: url('./images/main-page/hero-banner-320.jpg');
+    background-size: 320px 210px;
+  }
+  .hero__offer {
+    margin-bottom: 50px;
+    max-width: 496px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 133%;
+    color: $main-gray;
+    @media (max-width:1100px) {
+      margin-bottom: 48px;
+      line-height: 139%;
+    }
+    @media (max-width:450px) {
+      padding-left: 14px;
+      font-size: 20px;
+      max-width: 220px;
+      margin-bottom: 157px;
+    }
+  }
+  .hero__btn {
+    padding: 19px 50px;
+    @media (max-width:450px) {
+      width: 100%;
+    }
+  }
+}
